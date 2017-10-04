@@ -170,6 +170,7 @@ public class Taust extends JPanel implements ActionListener {
         g.setColor(Color.white);
         g.setFont(small);
         g.drawString(msg, (B_WIDTH - metr.stringWidth(msg)) / 2, B_HEIGHT / 2);
+
     }
 
     private void checkApple() {
@@ -335,6 +336,16 @@ public class Taust extends JPanel implements ActionListener {
                 rightDirection = false;
                 leftDirection = false;
                 moving = true;
+            }
+            if(key == KeyEvent.VK_R) {
+            	inGame = true;
+                leftDirection = false;
+                rightDirection = false;
+                upDirection = false;
+                downDirection = false;
+                moving = false;
+                win = false;
+            	initGame();
             }
         }
     }
